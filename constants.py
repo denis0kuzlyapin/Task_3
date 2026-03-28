@@ -5,8 +5,10 @@ class Url:
     PROFILE_URL = "https://stellarburgers.education-services.ru/account/profile"
 
     AUTH_URL = "https://stellarburgers.education-services.ru/login"
-    
+
     ORDER_HISTORY = "https://stellarburgers.education-services.ru/account/order-history"
+
+    ORDER_TAPE = "https://stellarburgers.education-services.ru/feed"
 
 
 class Endpoint:

@@ -5,7 +5,7 @@ class RestorePasswordLocators:
 
     shew_password_tggl = [
         By.XPATH,
-        "//div[contains(@class, 'input__icon-action')]//*[local-name()='svg']",
+        "//div[contains(@class, 'input__icon-action')]",
     ]
 
     email_input = [By.XPATH, "//div/main/div/form/fieldset/div/div/input"]

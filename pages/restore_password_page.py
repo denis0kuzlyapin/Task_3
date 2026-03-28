@@ -33,4 +33,4 @@ class RestorePasswordPage(BasePage):
         return self
 
     def is_active_password_input_present(self):
-        return self.is_element_present(self.locators.active_password_input, 3)
+        return self.is_element_visible(self.locators.active_password_input, 3)

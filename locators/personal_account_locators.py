@@ -9,3 +9,9 @@ class AccountLocators:
 
     profile_btn = [By.XPATH, "//div/main/div/nav/ul/li[1]/a"]
 
+    upper_order_id = [By.XPATH, "//div/main/div/div/div/ul/li[1]/a/div[1]/p[1]"]
+
+    numbers_of_orders_in_history = [
+        By.XPATH,
+        "//p[@class='text text_type_digits-default']",
+    ]

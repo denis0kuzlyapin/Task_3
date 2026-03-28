@@ -15,10 +15,10 @@ class AuthPage(BasePage):
     def login(self, email, password):
         self.send_keys(self.locators.email_input, email)
         self.send_keys(self.locators.password_input, password)
-        self.click(self.locators.login_btn)
-        
+        self.click_safe(self.locators.login_btn)
+
         self.wait_url_to_be(Url.BASE_URL)
-        
+
         return self
 
     def click_restore_button(self):

@@ -6,6 +6,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 
+from api import Order
+
 
 class BrowserFactory:
     @staticmethod
@@ -87,3 +89,18 @@ class GenDataForUser:
             "email": GenDataForUser.static_nonexistent_email(),
             "password": GenDataForUser.static_nonexistent_password(),
         }
+
+
+class GenOrder:
+
+    def create_random_order(auth_token):
+        # Создаёт заказ с одним случайным ингредиентом и возвращает номер заказа
+        response_ingredients = Order.get_ingredients()
+        ingredients_data = response_ingredients.json()["data"]
+        random_index = random.randint(0, len(ingredients_data) - 1)
+        ingredient = ingredients_data[random_index]["_id"]
+
+        order_payload = {"ingredients": [ingredient]}
+        response = Order.create_order(order_payload, auth_token)
+
+        return response.json()["order"]["number"]
