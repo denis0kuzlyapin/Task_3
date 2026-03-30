@@ -21,7 +21,7 @@ class RestorePasswordPage(BasePage):
         return self
 
     def click_restore_btn(self):
-        self.click_safe(self.locators.restore_btn)
+        self.click_safe(self.locators.save_btn)
         return self
 
     def wait_default_password_input(self):

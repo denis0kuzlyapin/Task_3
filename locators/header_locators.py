@@ -2,10 +2,10 @@ from selenium.webdriver.common.by import By
 
 
 class HeaderLocators:
-    logo = [By.XPATH, "//div/header/nav/div"]
+    logo = [By.CSS_SELECTOR, "div[class*='AppHeader_header__logo']"]
 
-    personal_account = [By.XPATH, "//div/header/nav/a/p"]
+    personal_account = [By.XPATH, "//p[text()='Личный Кабинет']"]
 
-    order_tape = [By.XPATH, "//div/header/nav/ul/li[2]/a/p"]
+    order_tape = [By.XPATH, "//p[text()='Лента Заказов']"]
 
-    construct = [By.XPATH, "//div/header/nav/ul/li[1]/a/p"]
+    construct = [By.XPATH, "//p[text()='Конструктор']"]

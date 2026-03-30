@@ -2,6 +2,7 @@ import allure
 
 from pages.personal_account_page import PersonalAccount
 from pages.auth_page import AuthPage
+from constants import Url
 
 
 class TestPersonalAccountFlow:
@@ -49,14 +50,6 @@ class TestPersonalAccountFlow:
             current_url_auth = page_login.get_current_url()
 
         with allure.step("Сравнить открытые url с ожидаемыми"):
-            assert (
-                current_url_profile
-                == "https://stellarburgers.education-services.ru/account/profile"
-            )
-            assert (
-                current_url_order_history
-                == "https://stellarburgers.education-services.ru/account/order-history"
-            )
-            assert (
-                current_url_auth == "https://stellarburgers.education-services.ru/login"
-            )
+            assert current_url_profile == Url.PROFILE_URL
+            assert current_url_order_history == Url.ORDER_HISTORY
+            assert current_url_auth == Url.AUTH_URL

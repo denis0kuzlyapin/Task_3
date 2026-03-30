@@ -8,7 +8,7 @@ class RestorePasswordLocators:
         "//div[contains(@class, 'input__icon-action')]",
     ]
 
-    email_input = [By.XPATH, "//div/main/div/form/fieldset/div/div/input"]
+    email_input = (By.XPATH, "//input[@name='name']")
 
     active_password_input = [By.CSS_SELECTOR, ".input_status_active"]
 
@@ -17,4 +17,4 @@ class RestorePasswordLocators:
         "//input[@type='password']",
     ]
 
-    restore_btn = [By.XPATH, "//div/main/div/form/button"]
+    save_btn = [By.XPATH, "//div/main/div/form/button"]

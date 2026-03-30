@@ -54,3 +54,4 @@ class PersonalAccount(BasePage):
     def get_all_order_numbers_from_history(self):
         elements = self.find_elements(self.locators.numbers_of_orders_in_history)
         return [el.text.lstrip("#").lstrip("0") for el in elements]
+    

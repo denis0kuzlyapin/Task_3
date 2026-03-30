@@ -25,7 +25,7 @@ class OrderTapePage(BasePage):
         return self.is_element_visible(self.locators.order_id_of_modal)
 
     def is_first_ingredients_of_modal_visible(self):
-        return self.is_element_visible(self.locators.first_ingredient_of_modal)
+        return self.is_element_visible(self.locators.ingredient_of_modal)
 
     def is_completed_in_all_time_counter_visible(self):
         return self.is_element_visible(self.locators.completed_in_all_time_counter)

@@ -3,10 +3,10 @@ from selenium.webdriver.common.by import By
 
 class AuthPageLocators:
 
-    restore_password_btn = [By.XPATH, "//div/main/div/div/p[2]/a"]
+    restore_password_btn = [By.XPATH, "//a[contains(text(), 'Восстановить')]"]
 
-    email_input = (By.XPATH, "//div/main/div/form/fieldset[1]/div/div/input")
+    email_input = (By.XPATH, "//input[@name='name']")
 
-    password_input = (By.XPATH, "//div/main/div/form/fieldset[2]/div/div/input")
+    password_input = (By.XPATH, "//input[@name='Пароль']")
 
-    login_btn = (By.XPATH, "//div/main/div/form/button")
+    login_btn = (By.XPATH, "//button[contains(text(),'Войти')]")

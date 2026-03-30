@@ -54,7 +54,8 @@ class TestOrderTapePage:
         with allure.step("Дождаться кликабельности верхнего заказа в списке"):
             tape_page.wait_clickable_upper_order()
 
-        with allure.step("Найти все номера заказов и сохрнаить в переменную"):
+        with allure.step("Подождать появление заказа, и сохранить в переменную все номера заказов"):
+            time.sleep(1)
             order_element_in_tape = tape_page.get_all_order_numbers()
             order_numbers_in_tape = order_element_in_tape
 
@@ -63,7 +64,7 @@ class TestOrderTapePage:
         with allure.step("Нажать 'Личный кабинет'"):
             account_page.click_personal_account
 
-        with allure.step("Нажать 'Личный кабинет'"):
+        with allure.step("Дождаться кликабельности 'Истории заказов'"):
             account_page.wait_clickable_order_history
 
         with allure.step("Нажать 'История заказов'"):

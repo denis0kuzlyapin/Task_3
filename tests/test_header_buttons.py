@@ -1,6 +1,7 @@
 import allure
 
 from pages.header import Header
+from constants import Url
 
 
 class TestHeaderButtons:
@@ -33,11 +34,5 @@ class TestHeaderButtons:
             current_url_constructor = header.get_current_url()
 
         with allure.step("Сравнить открытые url с ожидаемыми"):
-            assert (
-                current_url_order_tape
-                == "https://stellarburgers.education-services.ru/feed"
-            )
-            assert (
-                current_url_constructor
-                == "https://stellarburgers.education-services.ru/"
-            )
+            assert current_url_order_tape == Url.ORDER_TAPE
+            assert current_url_constructor == Url.BASE_URL
